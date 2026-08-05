@@ -1,0 +1,48 @@
+name: Suggest a project
+description: Add a module, specification, tool or article to the list
+title: "[add] "
+labels: [suggestion]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      placeholder: https://github.com/vendor/module-name
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Specifications and Standards
+        - Discovery Files
+        - Crawler Policy and Analytics
+        - Structured Data
+        - Product Feeds
+        - Agentic Checkout
+        - MCP Servers
+        - Auditing and Monitoring
+        - Reading
+        - Related Lists
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+      description: Sentence case, ends in a period, no marketing language.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Why it meets the inclusion criteria
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      options:
+        - label: I am affiliated with this project.

@@ -1,0 +1,48 @@
+name: stats
+
+on:
+  push:
+    branches: [main]
+    paths: [README.md]
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recount entries and rewrite the stats line
+        run: |
+          python3 - <<'PY'
+          import re
+          p = 'README.md'
+          t = open(p, encoding='utf-8').read()
+          sec, items = None, {}
+          for line in t.split('\n'):
+              if line.startswith('## '):
+                  sec = line[3:].strip(); items.setdefault(sec, 0)
+              elif line.startswith('- [') and sec and sec != 'Contents':
+                  items[sec] += 1
+          skip = {'Contents', 'Reading', 'Related Lists', 'Contributing', 'License', 'How to Choose', 'At a Glance'}
+          total = sum(v for k, v in items.items() if k not in skip)
+          line = (f"**{total} projects tracked** — "
+                  f"{items.get('Discovery Files',0)} llms.txt implementations, "
+                  f"{items.get('MCP Servers',0)} MCP servers, "
+                  f"{items.get('Agentic Checkout',0)} agentic checkout projects, "
+                  f"{items.get('Specifications and Standards',0)} specifications.")
+          new = re.sub(r'(?m)^\*\*\d+ projects tracked\*\*.*$', line, t)
+          if new == t:
+              new = t.replace('Last reviewed:', line + '\n\nLast reviewed:', 1)
+          if new != t:
+              open(p, 'w', encoding='utf-8').write(new)
+              print('updated:', line)
+          PY
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: recount entries'
+          file_pattern: README.md

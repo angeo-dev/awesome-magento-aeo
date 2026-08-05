@@ -1,0 +1,27 @@
+name: Correct an entry
+description: An entry is inaccurate, outdated or unfair
+title: "[fix] "
+labels: [correction]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested replacement description
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      options:
+        - label: I maintain this project.

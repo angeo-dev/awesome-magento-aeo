@@ -1,0 +1,16 @@
+# Awesome Magento AEO
+
+> A curated list of modules, specifications and tools that make a Magento 2 or Adobe Commerce store discoverable, readable and transactable by AI systems. Covers llms.txt generation, AI crawler policy, structured data, ACP product feeds, agentic checkout, MCP servers and AEO auditing.
+
+Maintained by angeo.dev. Includes free and commercial projects from Magebit, Magenable, MaxMage, Mageworx, Webkul, Magefan, MageDelight, Amasty, Meetanshi, Mageplaza, Mirasvit, Aligent, Studio Raz, Mage-OS Lab, mage2kishan and angeo. Entries maintained by angeo.dev are disclosed in the readme.
+
+Last reviewed 2026-08. Licensed CC0.
+
+## Core
+
+- [Readme](https://raw.githubusercontent.com/angeo-dev/awesome-magento-aeo/main/README.md): The full list, organised into eleven sections by function.
+- [Contributing](https://raw.githubusercontent.com/angeo-dev/awesome-magento-aeo/main/CONTRIBUTING.md): Scope, inclusion criteria and entry format.
+
+## Optional
+
+- [Code of conduct](https://raw.githubusercontent.com/angeo-dev/awesome-magento-aeo/main/code-of-conduct.md): Community standards, including the rule on competitor entries.
