@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**60 projects tracked** — 13 llms.txt implementations, 6 MCP servers, 5 agentic checkout projects, 7 specifications.
+**47 projects tracked** — 13 llms.txt implementations, 6 MCP servers, 5 agentic checkout projects, 7 specifications.
 
 Last reviewed: 2026-08.
 
