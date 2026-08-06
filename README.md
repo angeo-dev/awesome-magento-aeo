@@ -6,13 +6,13 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**47 projects tracked** — 13 llms.txt implementations, 6 MCP servers, 5 agentic checkout projects, 7 specifications.
+**40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
 
-Last reviewed: 2026-08.
+Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
 
 **This market is roughly a year old.** Discovery files and structured data are settled work with many mature implementations. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
-**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 11 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification. See [Contributing](CONTRIBUTING.md).
+**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 11 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
 
 ## Contents
 
@@ -27,55 +27,28 @@ Last reviewed: 2026-08.
 - [MCP Servers](#mcp-servers)
 - [Auditing and Monitoring](#auditing-and-monitoring)
 - [Reading](#reading)
-- [Related Lists](#related-lists)
 
 ## How to Choose
 
-Start from the problem, not the protocol. Each route points at a section, not a product.
+Start from the problem, not the protocol. Each route points at a section below, not at a product.
 
-- **You want your store to appear in ChatGPT, Claude, Perplexity or Google AI Overviews.** Start with [Discovery Files](#discovery-files) — 13 implementations — then [Structured Data](#structured-data). These two carry most of the result and are the settled part of the field.
-- **AI crawlers are hitting your catalog and you want to decide the terms.** Go to [Crawler Policy and Analytics](#crawler-policy-and-analytics). Read RFC 9309 first; the inheritance rule catches almost everyone.
-- **You want to sell inside ChatGPT.** Go to [Product Feeds](#product-feeds), then [Agentic Checkout](#agentic-checkout) — 5 projects, none past 1.0. Confirm you can get OpenAI merchant approval in your region before writing any code.
-- **You want an AI agent to query or operate the store.** Go to [MCP Servers](#mcp-servers) — 6 servers. Storefront and admin servers are different security problems; do not mix them up.
-- **You want to know where you stand before changing anything.** Go to [Auditing and Monitoring](#auditing-and-monitoring). Measure first — most stores fail on schema and robots long before anything agentic matters.
-- **You are researching the field rather than a store.** Go to [Specifications and Standards](#specifications-and-standards) — 7 specs — and [Related Lists](#related-lists).
+**You want your store to appear in ChatGPT, Claude, Perplexity or Google AI Overviews.** Start with Discovery Files — 11 implementations — then Structured Data. These two carry most of the result and are the settled part of the field.
+
+**AI crawlers are hitting your catalog and you want to decide the terms.** Read Crawler Policy and Analytics, and read RFC 9309 first. Its group inheritance rule catches almost everyone.
+
+**You want to sell inside ChatGPT.** Read Product Feeds, then Agentic Checkout — 5 projects, none past 1.0. Confirm you can get OpenAI merchant approval in your region before writing any code.
+
+**You want an AI agent to query or operate the store.** Read MCP Servers. Storefront and admin servers are different security problems and should not be mixed up.
+
+**You want to know where you stand before changing anything.** Read Auditing and Monitoring. Measure first — most stores fail on schema and robots long before anything agentic matters.
+
+**You are researching the field rather than a store.** Read Specifications and Standards, then Related Lists.
 
 ## At a Glance
 
-Coverage by project. `Y` means the project implements the capability; `~` means partial or bundled inside a broader feature.
+A capability matrix for every project in this list — which ones cover `llms.txt`, crawler policy, structured data, feeds, checkout, MCP and auditing, with each project's self-declared maturity status — is kept in [COMPARISON.md](COMPARISON.md).
 
-**Status** reflects only what each project declares about itself. `Released` means tagged, versioned releases. `In progress` and `Experimental` are the maintainers' own words. `Unlabelled` means the project makes no maturity claim — it is not a criticism, and checking recent commit activity is a better signal than anything in this table.
-
-### Open source
-
-| Project | llms.txt | Crawler policy | Schema | Feed | Checkout | MCP | Audit | License | Status |
-|---|---|---|---|---|---|---|---|---|---|
-| aligent/magento2-llms-txt | Y | | | | | | | OSS | Unlabelled |
-| mage-os/module-llm-txt | Y | | | | | | | OSS | Unlabelled |
-| mage2kishan/module-llms-txt | Y | | | | | | | OSS | Unlabelled |
-| magebitcom (3 modules) | | | | ~ | Y | Y | | OSS | In progress |
-| magendooro/magemcp | | | | | | Y | | OSS | Unlabelled |
-| magenable (2 modules) | | | | Y | | Y | | OSS | Unlabelled |
-| mageplaza/magento-2-seo | | | Y | | | | ~ | OSS | Released |
-| MaxMage/module-agentic-commerce | | | | | Y | | | OSS | Experimental |
-| rkd/module-llms-txt | Y | | | | | | | MIT | Unlabelled |
-| studioraz/magento2-llms-txt | Y | | | | | | | OSS | Unlabelled |
-| thomastx05/magento-mcp | | | | | | Y | | OSS | Unlabelled |
-| angeo (11 modules) | Y | Y | Y | Y | Y | Y | Y | MIT | Released |
-
-### Commercial
-
-| Project | llms.txt | Crawler policy | Schema | Feed | Checkout | MCP | Audit | Notes |
-|---|---|---|---|---|---|---|---|---|
-| Amasty SEO Toolkit | Y | | Y | | | | Y | llms.txt is Pro and Premium tiers only |
-| Magefan LLMs TXT Generator | Y | | | | | | | Single purpose |
-| MageDelight | Y | | Y | | | | | |
-| Mageworx SEO Suite Ultimate | Y | Y | Y | | | | | Bot analytics with verification |
-| Meetanshi LLMs TXT Generator | Y | | | | | | | Single purpose |
-| Mirasvit | | | Y | Y | Y | Y | Y | Widest commercial coverage |
-| Webkul LLMs TXT Generator | Y | Y | | | | | | Crawler analytics dashboard |
-
-Two rows cover many columns — angeo and Mirasvit. Both are suites of separate modules rather than single products, so breadth here is a packaging fact, not a quality judgement. A single-purpose module that does one column well is often the better choice.
+Each project appears once in the sections below, in the place closest to its primary purpose. Several SEO suites cover more than one category; the comparison file is where that shows.
 
 ## Specifications and Standards
 
@@ -94,13 +67,11 @@ The protocols the modules below implement. Read these before evaluating anything
 Files that tell AI crawlers what the store is and which pages matter. The most crowded and most mature category here.
 
 - [aligent/magento2-llms-txt](https://github.com/aligent/magento2-llms-txt) - Store-scoped generation with configurable entity selection and hourly cron evaluation. Unlabelled.
-- [amasty/module-llms-txt](https://amasty.com/seo-toolkit-for-magento-2.html) - Part of SEO Toolkit Pro and Premium, installed through Composer suggest rather than standalone. Commercial.
 - [Magefan LLMs TXT Generator](https://magefan.com/magento-2-llms-txt-generator) - Per store view generation with brand metadata blocks and configurable cron frequency. Commercial.
 - [mage-os/module-llm-txt](https://github.com/mage-os-lab/llms.txt) - Mage-OS Lab module that collects store data and generates the file through an OpenAI prompt. Unlabelled.
 - [mage2kishan/module-blog](https://packagist.org/packages/mage2kishan/module-blog) - Blog extension whose posts feed `llms.txt` and `llms.json`, with IndexNow pinging and a Markdown export endpoint. Unlabelled.
 - [mage2kishan/module-llms-txt](https://packagist.org/packages/mage2kishan/module-llms-txt) - Serves `llms.txt`, `llms-full.txt` and `llms.json` with weighted ranking, use-case grouping and cron cache warm-up. Unlabelled.
 - [MageDelight LLMs TXT File Generator](https://www.magedelight.com/llms-txt-file-generator-magento-2.html) - Entity selection across products, categories and CMS pages with scheduled regeneration. Commercial.
-- [Mageworx SEO Suite Ultimate](https://www.mageworx.com/magento-2-seo-extension.html) - SEO suite that advertises the discovery manifest automatically and keeps it current. Commercial.
 - [Meetanshi LLMs TXT Generator](https://meetanshi.com/magento-2-llms-txt-generator.html) - Per store view files with cron auto-update. Commercial.
 - [rkd/module-llms-txt](https://github.com/iamrobindhiman/magento2-module-llms-txt) - Cursor-based pagination and PHP generators for large catalogs, with CLI dry-run, validation and REST endpoints. MIT, unlabelled.
 - [studioraz/magento2-llms-txt](https://github.com/studioraz/magento2-llms-txt) - Admin-generated Markdown with manual override and awareness of installed feed and point-of-sale modules. Unlabelled.
@@ -111,18 +82,16 @@ Files that tell AI crawlers what the store is and which pages matter. The most c
 
 Deciding which AI crawlers may enter, verifying they are who they claim, and measuring what they took. A thin category that is likely to grow.
 
-- [Mageworx SEO Suite Ultimate](https://www.mageworx.com/magento-2-seo-extension.html) - Reports which AI crawlers visit and how often, with verification of genuine bots. Commercial.
-- [Webkul AI Crawler Analytics](https://webkul.com/blog/magento-2-llms-txt-generator-documentation) - Per-website dashboard of AI bot hits on the discovery files, with an option to discard unrecognised user agents. Commercial.
+- [Mageworx SEO Suite Ultimate](https://www.mageworx.com/magento-2-seo-extension.html) - Reports which AI crawlers visit and how often, with verification of genuine bots. Also advertises `llms.txt` automatically. Commercial.
+- [Webkul AI Crawler Analytics](https://webkul.com/blog/magento-2-llms-txt-generator-documentation) - Documentation for the per-website dashboard of AI bot hits on the discovery files, with an option to discard unrecognised user agents. Commercial.
 - [angeo/module-robots-txt-aeo](https://packagist.org/packages/angeo/module-robots-txt-aeo) - Lossless RFC 9309 parsing with a maintained bot catalogue, RSL and Content-Usage emission, and a bot IP verification command. MIT, released.
 
 ## Structured Data
 
-Machine-readable product facts. The oldest AEO signal and still the one most stores get wrong.
+Machine-readable product facts. The oldest AEO signal and still the one most stores get wrong. Each project appears once in this list; the SEO suites here also cover other columns, which the table above shows.
 
-- [Amasty SEO Toolkit](https://amasty.com/seo-toolkit-for-magento-2.html) - Structured data alongside pagination and AJAX scroll handling, with an AI-assisted metadata fix add-on. Commercial.
+- [Amasty SEO Toolkit](https://amasty.com/seo-toolkit-for-magento-2.html) - Structured data with pagination and AJAX scroll handling, plus an AI-assisted metadata fix add-on and page-level analysis. Bundles `llms.txt` in its Pro and Premium tiers. Commercial.
 - [mageplaza/magento-2-seo](https://github.com/mageplaza) - Free community SEO module covering canonical tags and basic structured data, with the widest install base of any Magento SEO extension. Released.
-- [MageDelight SEO](https://www.magedelight.com/blog/best-magento-2-seo-extensions-comparison) - Mid-market SEO suite covering the structured data baseline. Commercial.
-- [Mirasvit SEO](https://mirasvit.com/magento-2-mcp-ai-integration.html) - SEO suite covering the structured data baseline, with a full store crawler. Commercial.
 - [angeo/module-rich-data](https://packagist.org/packages/angeo/module-rich-data) - Product JSON-LD with offer availability, GTIN and MPN, shipping details, return policy and breadcrumbs. MIT, released.
 
 ## Product Feeds
@@ -152,17 +121,14 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 - [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules. In progress.
 - [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.
-- [Mirasvit AI Agent Connector](https://mirasvit.com/magento-2-mcp-ai-integration.html) - MCP server with OAuth 2.1 and role-based permissions. Commercial.
 - [thomastx05/magento-mcp](https://github.com/thomastx05/magento-mcp) - Node administration server with OAuth 1.0 credentials, two-phase commit for bulk operations and guardrails on price and volume. Unlabelled.
 - [angeo/module-mcp-server](https://packagist.org/packages/angeo/module-mcp-server) - Read-only storefront catalog access with rate limiting and an extensible tool registry. MIT, released.
 
 ## Auditing and Monitoring
 
-Measuring whether any of the above works. Crawl access, citation share and rendering quality are three separate questions, and most auditing still happens inside general SEO suites rather than AEO-specific tools.
+Measuring whether any of the above works. Crawl access, citation share and rendering quality are three separate questions, and most auditing still happens inside general SEO suites rather than AEO-specific tools. Amasty, Mageworx and Webkul all include audit or analytics features and are listed in the sections above.
 
-- [Amasty SEO Toolkit](https://amasty.com/seo-toolkit-for-magento-2.html) - Page-level one-click analysis with an AI-assisted metadata fix add-on, no full-site crawler. Commercial.
-- [mageplaza/magento-2-seo](https://github.com/mageplaza) - Higher tiers add an SEO checklist that tracks pending optimisations as a manual audit guide. Released.
-- [Mirasvit SEO](https://mirasvit.com/magento-2-mcp-ai-integration.html) - Store-wide crawler, the most thorough auditing among the commercial suites. Commercial.
+- [Mirasvit](https://mirasvit.com/magento-2-mcp-ai-integration.html) - Store-wide crawler for issues that block extraction, alongside an MCP server with OAuth 2.1 and role-based permissions and an ACP integration. Commercial.
 - [angeo/module-aeo-audit](https://packagist.org/packages/angeo/module-aeo-audit) - Weighted signal audit across robots, discovery files, schema, sitemap and feed, with CrUX data and a CI failure threshold. MIT, released.
 - [angeo/module-aeo-brand-visibility](https://packagist.org/packages/angeo/module-aeo-brand-visibility) - Tracks brand recall and citation rate across major assistants, with competitor share-of-voice. MIT, released.
 
@@ -194,9 +160,3 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 ## Contributing
 
 Read the [guidelines](CONTRIBUTING.md) before opening a pull request. Corrections to your own project's entry are always welcome and never need justification.
-
-## License
-
-[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](LICENSE)
-
-The list itself is CC0 — the curation, ordering and descriptions are placed in the public domain, including any database rights. The projects it links to keep their own licenses.
