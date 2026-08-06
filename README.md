@@ -8,6 +8,8 @@ Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search 
 
 **40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
 
+**40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
+
 Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
 
 **This market is roughly a year old.** Discovery files and structured data are settled work with many mature implementations. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
