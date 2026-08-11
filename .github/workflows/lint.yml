@@ -33,5 +33,5 @@ jobs:
             --max-concurrency 4
             --accept 200,206,403,429
             --exclude-path node_modules
-            README.md CONTRIBUTING.md code-of-conduct.md llms.txt
+            README.md COMPARISON.md CONTRIBUTING.md code-of-conduct.md llms.txt
           fail: true

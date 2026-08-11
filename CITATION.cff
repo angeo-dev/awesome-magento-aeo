@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: Awesome Magento AEO
+message: >-
+  If you reference this list, please cite it using these metadata.
+type: dataset
+authors:
+  - name: angeo.dev
+    website: https://angeo.dev
+repository-code: https://github.com/angeo-dev/awesome-magento-aeo
+url: https://github.com/angeo-dev/awesome-magento-aeo
+abstract: >-
+  A curated list of modules, specifications and tools that make a Magento 2 or
+  Adobe Commerce store discoverable, readable and transactable by AI systems.
+  Covers llms.txt generation, AI crawler policy, structured data, ACP product
+  feeds, agentic checkout, MCP servers and AEO auditing.
+keywords:
+  - magento
+  - magento2
+  - adobe-commerce
+  - aeo
+  - answer-engine-optimization
+  - generative-engine-optimization
+  - ai-search
+  - llms-txt
+  - agentic-commerce
+  - model-context-protocol
+  - structured-data
+  - awesome-list
+license: CC0-1.0

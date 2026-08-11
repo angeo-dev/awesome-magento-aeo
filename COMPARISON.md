@@ -1,6 +1,6 @@
 # Comparison
 
-Coverage by project, as of version 1.0.0 (2026-08). `✓` means the project implements the capability, `◐` means partial or bundled inside a broader feature, and `—` means not covered. A dash is not a criticism: a single-purpose module that does one thing well is often the better choice.
+Coverage by project, as of version 1.1.0 (2026-08). `✓` means the project implements the capability, `◐` means partial or bundled inside a broader feature, and `—` means not covered. A dash is not a criticism: a single-purpose module that does one thing well is often the better choice.
 
 **Status** reflects only what each project declares about itself. `Released` means tagged, versioned releases. `In progress` and `Experimental` are the maintainers' own words. `Unlabelled` means the project makes no maturity claim — it is not a criticism, and recent commit activity is a better signal than anything in this table.
 
@@ -14,6 +14,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 |---------------------------------|----------|----------------|--------|------|----------|-----|-------|---------|--------------|
 | aligent/magento2-llms-txt       | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage-os/module-llm-txt          | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
+| mage-os/module-seo              | ✓        | ✓              | ✓      | ◐    | ◐        | —   | —     | OSS     | Unlabelled   |
 | mage2kishan/module-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | magebitcom (3 modules)          | —        | —              | —      | ◐    | ✓        | ✓   | —     | OSS     | In progress  |
 | magendooro/magemcp              | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
@@ -23,6 +24,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 | rkd/module-llms-txt             | ✓        | —              | —      | —    | —        | —   | —     | MIT     | Unlabelled   |
 | studioraz/magento2-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
+| yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | angeo (11 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
 
 ## Commercial

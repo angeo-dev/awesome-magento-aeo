@@ -6,11 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
-
-**40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
-
-**40 projects tracked** — 11 llms.txt implementations, 5 MCP servers, 5 agentic checkout projects, 7 specifications.
+**42 projects tracked** — 11 llms.txt implementations, 6 MCP servers, 5 agentic checkout projects, 7 specifications.
 
 Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
 
@@ -92,10 +88,11 @@ Deciding which AI crawlers may enter, verifying they are who they claim, and mea
 
 ## Structured Data
 
-Machine-readable product facts. The oldest AEO signal and still the one most stores get wrong. Each project appears once in this list; the SEO suites here also cover other columns, which the table above shows.
+Machine-readable product facts. The oldest AEO signal and still the one most stores get wrong. Each project appears once in this list; the SEO suites here also cover other columns, which the comparison file shows.
 
 - [Amasty SEO Toolkit](https://amasty.com/seo-toolkit-for-magento-2.html) - Structured data with pagination and AJAX scroll handling, plus an AI-assisted metadata fix add-on and page-level analysis. Bundles `llms.txt` in its Pro and Premium tiers. Commercial.
-- [mageplaza/magento-2-seo](https://github.com/mageplaza) - Free community SEO module covering canonical tags and basic structured data, with the widest install base of any Magento SEO extension. Released.
+- [mage-os/module-seo](https://github.com/mage-os-lab/module-seo) - SEO, AEO and GEO in one module built from extensible provider pools: 16 product schema templates, FAQ rich results, hreflang and robots meta, plus `llms.txt`, `llms.jsonl`, AI-crawler directives and `.well-known/` manifests for UCP, `ai-plugin.json` and `security.txt`. Unlabelled.
+- [mageplaza/magento-2-seo](https://github.com/mageplaza/magento-2-seo) - Free community SEO module covering canonical tags and basic structured data, with the widest install base of any Magento SEO extension. Released.
 - [angeo/module-rich-data](https://packagist.org/packages/angeo/module-rich-data) - Product JSON-LD with offer availability, GTIN and MPN, shipping details, return policy and breadcrumbs. MIT, released.
 
 ## Product Feeds
@@ -122,10 +119,11 @@ No module can make a store sellable inside ChatGPT on its own. That also needs m
 
 Exposing the store to AI agents as callable tools. Storefront servers face shoppers; admin servers face staff, and the security model differs sharply between the two.
 
-- [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules. In progress.
+- [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules, including a catalog tool extension. In progress.
 - [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.
 - [thomastx05/magento-mcp](https://github.com/thomastx05/magento-mcp) - Node administration server with OAuth 1.0 credentials, two-phase commit for bulk operations and guardrails on price and volume. Unlabelled.
+- [yuriyakishin/magento2-mcp-server](https://github.com/yuriyakishin/magento2-mcp-server) - Free server covering catalog, orders, customers, CMS and sales, secured with OAuth 2.1 and Magento ACL. Unlabelled.
 - [angeo/module-mcp-server](https://packagist.org/packages/angeo/module-mcp-server) - Read-only storefront catalog access with rate limiting and an extensible tool registry. MIT, released.
 
 ## Auditing and Monitoring
@@ -157,6 +155,7 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 - [amplifying-ai/awesome-generative-engine-optimization](https://github.com/amplifying-ai/awesome-generative-engine-optimization) - GEO guides, research and industry benchmark reports. Vendor-maintained.
 - [izak-fisher/generative-engine-optimization-tools](https://github.com/izak-fisher/generative-engine-optimization-tools) - The most complete directory of AI-visibility monitoring and prompt-testing tools.
 - [luka2chat/awesome-geo](https://github.com/luka2chat/awesome-geo) - GEO resources, newsletters, communities and llms.txt directories.
+- [MagePsycho/awesome-magento-ai](https://github.com/MagePsycho/awesome-magento-ai) - AI tooling for building and operating Magento: agent skills, dev-side MCP servers, admin and catalog AI modules. The complement to this list, covering AI working inside the store rather than the store as AI reads it.
 - [run-as-root/awesome-magento2](https://github.com/run-as-root/awesome-magento2) - The main Magento 2 list, tracking over 230 projects with weekly automated maintenance and graveyard signals.
 - [sunel/awesome-magento](https://github.com/sunel/awesome-magento) - Mixed Magento 1 and Magento 2 resources. Not recently updated.
 - [yan253319066/awesome-geo-resources](https://github.com/yan253319066/awesome-geo-resources) - GEO, AI visibility and citation resources. Vendor-maintained.
