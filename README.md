@@ -10,7 +10,7 @@ Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search 
 
 Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
 
-**This market is roughly a year old.** Discovery files and structured data are settled work with many mature implementations. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
+**This ecosystem is roughly a year old.** Discovery files are crowded and structured data is mature. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
 **Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 11 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
 
@@ -36,7 +36,7 @@ Start from the problem, not the protocol. Each route points at a section below, 
 
 **AI crawlers are hitting your catalog and you want to decide the terms.** Read Crawler Policy and Analytics, and read RFC 9309 first. Its group inheritance rule catches almost everyone.
 
-**You want to sell inside ChatGPT.** Read Product Feeds, then Agentic Checkout — 5 projects, none past 1.0. Confirm you can get OpenAI merchant approval in your region before writing any code.
+**You want to sell through AI agents.** Start with Product Feeds, not Agentic Checkout. In March 2026 OpenAI scaled Instant Checkout back toward discovery, with the purchase completing on the merchant's own store, so a feed is what puts products in front of shoppers today. Agentic Checkout — 5 projects, none past 1.0 — matters for where the protocols are heading, not for revenue this quarter.
 
 **You want an AI agent to query or operate the store.** Read MCP Servers. Storefront and admin servers are different security problems and should not be mixed up.
 
@@ -54,7 +54,7 @@ Each project appears once in the sections below, in the place closest to its pri
 
 The protocols the modules below implement. Read these before evaluating anything.
 
-- [Agentic Commerce Protocol](https://developers.openai.com/commerce) - OpenAI's specification for merchant product feeds and in-chat checkout, including the Shared Payment Token flow. Abbreviated ACP.
+- [Agentic Commerce Protocol](https://developers.openai.com/commerce) - OpenAI's specification for merchant product feeds, promotions and availability, plus a delegated payment flow. Its role in ChatGPT shifted toward discovery in March 2026. Abbreviated ACP.
 - [llms.txt](https://llmstxt.org) - Proposed convention for a Markdown manifest addressed to language models rather than search crawlers.
 - [Model Context Protocol](https://modelcontextprotocol.io) - Anthropic's open standard for exposing tools and data to AI agents. Abbreviated MCP.
 - [Really Simple Licensing](https://rslstandard.org/rsl) - XML vocabulary for machine-readable content licensing, integrated with robots.txt, HTTP headers and HTML link elements. Abbreviated RSL.
@@ -113,7 +113,7 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
 - [angeo/module-ucp](https://packagist.org/packages/angeo/module-ucp) - Publishes a `.well-known/ucp` profile advertising service bindings to UCP-compliant agents. MIT, released.
 
-No module can make a store sellable inside ChatGPT on its own. That also needs merchant approval from OpenAI, currently limited by region, and a payment provider supporting the Shared Payment Token.
+This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — around 30 Shopify merchants had shipped against it — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
 
 ## MCP Servers
 
@@ -134,7 +134,7 @@ Measuring whether any of the above works. Crawl access, citation share and rende
 - [angeo/module-aeo-audit](https://packagist.org/packages/angeo/module-aeo-audit) - Weighted signal audit across robots, discovery files, schema, sitemap and feed, with CrUX data and a CI failure threshold. MIT, released.
 - [angeo/module-aeo-brand-visibility](https://packagist.org/packages/angeo/module-aeo-brand-visibility) - Tracks brand recall and citation rate across major assistants, with competitor share-of-voice. MIT, released.
 
-Two hosted options need no installation: the [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports AI citation counts and cited pages under its AI Performance view — currently the only free first-party count of how often an AI system quoted a site.
+Two hosted options need no installation: the [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports citation counts, cited pages and grounding queries under its AI Performance view — still the only free first-party count of how often an AI system cited a site. Google Search Console added generative AI reporting in June 2026, but it exposes impressions rather than citations.
 
 ## Reading
 
