@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**42 projects tracked** — 11 llms.txt implementations, 6 MCP servers, 5 agentic checkout projects, 7 specifications.
+**43 projects tracked** — 11 llms.txt implementations, 7 MCP servers, 5 agentic checkout projects, 7 specifications.
 
 Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
 
@@ -119,6 +119,7 @@ This category is smaller than it looks. In March 2026 OpenAI pulled back from in
 
 Exposing the store to AI agents as callable tools. Storefront servers face shoppers; admin servers face staff, and the security model differs sharply between the two.
 
+- [adwise/magento2-mcp](https://github.com/adwise/magento2-mcp) - Lightweight MCP server exposing store information, module status, configuration, cache and indexer tools, with optional sub-modules for catalog management and Hyvä CMS page editing. Unlabelled.
 - [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules, including a catalog tool extension. In progress.
 - [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.

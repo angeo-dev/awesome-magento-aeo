@@ -12,6 +12,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 
 | Project                         | llms.txt | Crawler policy | Schema | Feed | Checkout | MCP | Audit | License | Status       |
 |---------------------------------|----------|----------------|--------|------|----------|-----|-------|---------|--------------|
+| adwise/magento2-mcp             | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | aligent/magento2-llms-txt       | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage-os/module-llm-txt          | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage-os/module-seo              | ✓        | ✓              | ✓      | ◐    | ◐        | —   | —     | OSS     | Unlabelled   |
