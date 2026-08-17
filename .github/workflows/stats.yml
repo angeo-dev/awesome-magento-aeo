@@ -41,7 +41,7 @@ jobs:
 
           total = sum(v for k, v in items.items() if k not in SKIP)
           stats = (f"**{total} projects tracked** — "
-                   f"{items.get('Discovery Files', 0)} llms.txt implementations, "
+                   f"{items.get('Discovery Files', 0)} discovery file implementations, "
                    f"{items.get('MCP Servers', 0)} MCP servers, "
                    f"{items.get('Agentic Checkout', 0)} agentic checkout projects, "
                    f"{items.get('Specifications and Standards', 0)} specifications.")
@@ -106,7 +106,7 @@ jobs:
 
           total = sum(v for k, v in items.items() if k not in SKIP)
           stats = (f"**{total} projects tracked** — "
-                   f"{items.get('Discovery Files', 0)} llms.txt implementations, "
+                   f"{items.get('Discovery Files', 0)} discovery file implementations, "
                    f"{items.get('MCP Servers', 0)} MCP servers, "
                    f"{items.get('Agentic Checkout', 0)} agentic checkout projects, "
                    f"{items.get('Specifications and Standards', 0)} specifications.")

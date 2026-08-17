@@ -6,9 +6,13 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**43 projects tracked** — 11 llms.txt implementations, 7 MCP servers, 5 agentic checkout projects, 7 specifications.
+**49 projects tracked** — 14 discovery file implementations, 8 MCP servers, 6 agentic checkout projects, 7 specifications.
 
-Last reviewed: 2026-08. The list is CC0; the projects it links to keep their own licenses.
+A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
+
+An entry belongs here if it is publicly available, works with Magento 2, Adobe Commerce or Mage-OS, has an identifiable AEO or agentic capability, and has a verifiable repository or product page. Full criteria and entry format are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Last reviewed: August 17, 2026. The list is CC0; the projects it links to keep their own licenses.
 
 **This ecosystem is roughly a year old.** Discovery files are crowded and structured data is mature. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
@@ -46,7 +50,7 @@ Start from the problem, not the protocol. Each route points at a section below, 
 
 ## At a Glance
 
-A capability matrix for every project in this list — which ones cover `llms.txt`, crawler policy, structured data, feeds, checkout, MCP and auditing, with each project's self-declared maturity status — is kept in [COMPARISON.md](COMPARISON.md).
+The comparison file linked above carries each project's self-declared maturity status alongside its capabilities.
 
 Each project appears once in the sections below, in the place closest to its primary purpose. Several SEO suites cover more than one category; the comparison file is where that shows.
 
@@ -57,26 +61,29 @@ The protocols the modules below implement. Read these before evaluating anything
 - [Agentic Commerce Protocol](https://developers.openai.com/commerce) - OpenAI's specification for merchant product feeds, promotions and availability, plus a delegated payment flow. Its role in ChatGPT shifted toward discovery in March 2026. Abbreviated ACP.
 - [llms.txt](https://llmstxt.org) - Proposed convention for a Markdown manifest addressed to language models rather than search crawlers.
 - [Model Context Protocol](https://modelcontextprotocol.io) - Anthropic's open standard for exposing tools and data to AI agents. Abbreviated MCP.
-- [Really Simple Licensing](https://rslstandard.org/rsl) - XML vocabulary for machine-readable content licensing, integrated with robots.txt, HTTP headers and HTML link elements. Abbreviated RSL.
+- [Really Simple Licensing](https://rslstandard.org/rsl) - XML vocabulary for machine-readable content licensing, integrated with robots.txt, HTTP headers and HTML link elements. A rights layer rather than a transport or discovery one — it states terms for AI use, it does not carry data. Abbreviated RSL.
 - [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) - The Robots Exclusion Protocol. A matched user-agent group does not inherit rules from the wildcard group, which is the most common cause of broken AI-bot policies.
 - [Schema.org Product](https://schema.org/Product) - The vocabulary AI extractors read for price, availability and identifiers.
-- [WebMCP](https://github.com/webmachinelearning/webmcp) - Draft web platform API letting a page expose in-page tools to browser agents.
+- [WebMCP](https://github.com/webmachinelearning/webmcp) - Proposed web platform API letting a page expose in-page tools to browser agents. Experimental — no shipped browser support, and the Lighthouse audits that check for it are themselves marked experimental.
 
 ## Discovery Files
 
-Files that tell AI crawlers what the store is and which pages matter. The most crowded and most mature category here.
+Files served at a known path that tell agents what the store is, which pages matter and what it supports. The most crowded category here.
 
 - [aligent/magento2-llms-txt](https://github.com/aligent/magento2-llms-txt) - Store-scoped generation with configurable entity selection and hourly cron evaluation. Unlabelled.
+- [CodeDecorator LLMs TXT Generator](https://codedecorator.com/magento-2-llms-txt-generator-extension.html) - Generation with per-entity exclusion of individual CMS pages, categories and products. Commercial.
 - [Magefan LLMs TXT Generator](https://magefan.com/magento-2-llms-txt-generator) - Per store view generation with brand metadata blocks and configurable cron frequency. Commercial.
 - [mage-os/module-llm-txt](https://github.com/mage-os-lab/llms.txt) - Mage-OS Lab module that collects store data and generates the file through an OpenAI prompt. Unlabelled.
 - [mage2kishan/module-blog](https://packagist.org/packages/mage2kishan/module-blog) - Blog extension whose posts feed `llms.txt` and `llms.json`, with IndexNow pinging and a Markdown export endpoint. Unlabelled.
 - [mage2kishan/module-llms-txt](https://packagist.org/packages/mage2kishan/module-llms-txt) - Serves `llms.txt`, `llms-full.txt` and `llms.json` with weighted ranking, use-case grouping and cron cache warm-up. Unlabelled.
 - [MageDelight LLMs TXT File Generator](https://www.magedelight.com/llms-txt-file-generator-magento-2.html) - Entity selection across products, categories and CMS pages with scheduled regeneration. Commercial.
 - [Meetanshi LLMs TXT Generator](https://meetanshi.com/magento-2-llms-txt-generator.html) - Per store view files with cron auto-update. Commercial.
+- [Plumrocket LLMs TXT Generator](https://commercemarketplace.adobe.com/plumrocket-llms-txt-generator.html) - Store-view-scoped files with automatic regeneration on catalog and content changes, inclusion controls and Hyvä support. Commercial.
 - [rkd/module-llms-txt](https://github.com/iamrobindhiman/magento2-module-llms-txt) - Cursor-based pagination and PHP generators for large catalogs, with CLI dry-run, validation and REST endpoints. MIT, unlabelled.
 - [studioraz/magento2-llms-txt](https://github.com/studioraz/magento2-llms-txt) - Admin-generated Markdown with manual override and awareness of installed feed and point-of-sale modules. Unlabelled.
 - [Webkul LLMs TXT Generator](https://commercemarketplace.adobe.com/webkul-module-llms-txt-generator.html) - Marketplace extension serving both files with correct content types, bundled with a crawler analytics dashboard. Commercial.
 - [angeo/module-llms-txt](https://github.com/angeo-dev/module-llms-txt) - Generates `llms.txt`, `llms-full.txt`, `llms.jsonl` and on-the-fly Markdown page mirrors, Page Builder aware. MIT, released.
+- [angeo/module-ucp](https://packagist.org/packages/angeo/module-ucp) - Publishes a `.well-known/ucp` profile advertising service bindings to UCP-compliant agents. A discovery manifest rather than a checkout implementation. MIT, released.
 
 ## Crawler Policy and Analytics
 
@@ -109,11 +116,12 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 
 - [magebitcom/magento2-agentic-commerce-module](https://github.com/magebitcom/magento2-agentic-commerce-module) - ACP integration for selling inside ChatGPT, targeting Hyvä, B2B and Adobe Commerce Cloud. In progress.
 - [magebitcom/magento2-universal-commerce-module](https://github.com/magebitcom/magento2-universal-commerce-module) - Universal Commerce Protocol implementation. In progress.
+- [Meetanshi Agentic Commerce](https://meetanshi.com/magento-2-agentic-commerce.html) - UCP profile, generic MCP server, WebMCP page tools and OpenAI ACP with checkout sessions mapped to real Magento quotes and delegated payment tokens through Stripe, plus an agent activity dashboard. Commercial.
+- [Meetanshi Google UCP Checkout](https://meetanshi.com/magento-2-google-ucp.html) - Headless checkout through Google's UCP with Google Pay, order status webhooks back to Google and per-product eligibility control. Commercial.
 - [MaxMage/module-agentic-commerce](https://github.com/MaxMage/module-agentic-commerce) - Agentic checkout flow with HMAC signature verification, idempotency and spec-shaped routes. Experimental.
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
-- [angeo/module-ucp](https://packagist.org/packages/angeo/module-ucp) - Publishes a `.well-known/ucp` profile advertising service bindings to UCP-compliant agents. MIT, released.
 
-This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — around 30 Shopify merchants had shipped against it — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
+This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — published figures put the live Shopify merchants at somewhere between a dozen and thirty — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
 
 ## MCP Servers
 
@@ -123,6 +131,7 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 - [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules, including a catalog tool extension. In progress.
 - [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.
+- [Mirasvit Agentic Commerce](https://mirasvit.com/magento-2-agentic-commerce.html) - Storefront MCP server and WebMCP tools alongside a UCP profile, `llms.txt`, `agents.md` and an agent discovery sitemap. Discovery only; in-conversation checkout is on the roadmap. Commercial.
 - [thomastx05/magento-mcp](https://github.com/thomastx05/magento-mcp) - Node administration server with OAuth 1.0 credentials, two-phase commit for bulk operations and guardrails on price and volume. Unlabelled.
 - [yuriyakishin/magento2-mcp-server](https://github.com/yuriyakishin/magento2-mcp-server) - Free server covering catalog, orders, customers, CMS and sales, secured with OAuth 2.1 and Magento ACL. Unlabelled.
 - [angeo/module-mcp-server](https://packagist.org/packages/angeo/module-mcp-server) - Read-only storefront catalog access with rate limiting and an extensible tool registry. MIT, released.
@@ -132,6 +141,7 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 Measuring whether any of the above works. Crawl access, citation share and rendering quality are three separate questions, and most auditing still happens inside general SEO suites rather than AEO-specific tools. Amasty, Mageworx and Webkul all include audit or analytics features and are listed in the sections above.
 
 - [Mirasvit](https://mirasvit.com/magento-2-mcp-ai-integration.html) - Store-wide crawler for issues that block extraction, alongside an MCP server with OAuth 2.1 and role-based permissions and an ACP integration. Commercial.
+- [PageSpeed Insights Agentic Browsing](https://pagespeed.web.dev/) - Google's hosted Lighthouse audit grades how ready a page is for AI agents, checking for `llms.txt` at the domain root and registered WebMCP tools. Not Magento-specific, and marked experimental. Free.
 - [angeo/module-aeo-audit](https://packagist.org/packages/angeo/module-aeo-audit) - Weighted signal audit across robots, discovery files, schema, sitemap and feed, with CrUX data and a CI failure threshold. MIT, released.
 - [angeo/module-aeo-brand-visibility](https://packagist.org/packages/angeo/module-aeo-brand-visibility) - Tracks brand recall and citation rate across major assistants, with competitor share-of-voice. MIT, released.
 
@@ -163,4 +173,4 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 
 ## Contributing
 
-Read the [guidelines](CONTRIBUTING.md) before opening a pull request. Corrections to your own project's entry are always welcome and never need justification.
+Read the contribution guidelines linked at the top before opening a pull request. Corrections to your own project's entry are always welcome and never need justification.

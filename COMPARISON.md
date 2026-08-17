@@ -33,9 +33,14 @@ Each project appears once in the [main list](README.md), in the section closest 
 | Project                      | llms.txt | Crawler policy | Schema | Feed | Checkout | MCP | Audit | Notes                                  |
 |------------------------------|----------|----------------|--------|------|----------|-----|-------|----------------------------------------|
 | Amasty SEO Toolkit           | ✓        | —              | ✓      | —    | —        | —   | ✓     | llms.txt is Pro and Premium tiers only |
-| Magefan LLMs TXT Generator   | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
+| CodeDecorator LLMs TXT       | ✓        | —              | —      | —    | —        | —   | —     | Per-entity exclusion controls          |
 | MageDelight                  | ✓        | —              | ✓      | —    | —        | —   | —     | —                                      |
+| Magefan LLMs TXT Generator   | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
 | Mageworx SEO Suite Ultimate  | ✓        | ✓              | ✓      | —    | —        | —   | —     | Bot analytics with verification        |
+| Meetanshi Agentic Commerce   | ✓        | ✓              | —      | ✓    | ✓        | ✓   | ✓     | Widest single-module coverage here     |
+| Meetanshi Google UCP         | —        | —              | —      | ✓    | ✓        | —   | —     | Google Pay, staged regional rollout    |
 | Meetanshi LLMs TXT Generator | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
-| Mirasvit                     | —        | —              | ✓      | ✓    | ✓        | ✓   | ✓     | Widest commercial coverage             |
+| Mirasvit AI Agent Connector  | —        | —              | ✓      | ✓    | ✓        | ✓   | ✓     | Widest commercial coverage             |
+| Mirasvit Agentic Commerce    | ✓        | ✓              | —      | ✓    | —        | ✓   | —     | Discovery only; checkout on roadmap    |
+| Plumrocket LLMs TXT          | ✓        | —              | —      | —    | —        | —   | —     | Store-view scoped, Hyvä support        |
 | Webkul LLMs TXT Generator    | ✓        | ✓              | —      | —    | —        | —   | —     | Crawler analytics dashboard            |
