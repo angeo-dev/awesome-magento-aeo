@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**49 projects tracked** — 14 discovery file implementations, 8 MCP servers, 6 agentic checkout projects, 7 specifications.
+**50 projects tracked** — 14 discovery file implementations, 9 MCP servers, 6 agentic checkout projects, 7 specifications.
 
 A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
 
@@ -132,6 +132,7 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 - [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.
 - [Mirasvit Agentic Commerce](https://mirasvit.com/magento-2-agentic-commerce.html) - Storefront MCP server and WebMCP tools alongside a UCP profile, `llms.txt`, `agents.md` and an agent discovery sitemap. Discovery only; in-conversation checkout is on the roadmap. Commercial.
+- [scandiweb/scandiweb-magento2-mcp](https://github.com/scandiweb/scandiweb-magento2-mcp) - A `POST /mcp` endpoint with OAuth and bearer sign-in, every tool call checked against Magento's own admin role tree, plus an optional content module with CMS, category, product, Hyvä CMS and Snowdog menu tools. OSL-3.0. Unlabelled.
 - [thomastx05/magento-mcp](https://github.com/thomastx05/magento-mcp) - Node administration server with OAuth 1.0 credentials, two-phase commit for bulk operations and guardrails on price and volume. Unlabelled.
 - [yuriyakishin/magento2-mcp-server](https://github.com/yuriyakishin/magento2-mcp-server) - Free server covering catalog, orders, customers, CMS and sales, secured with OAuth 2.1 and Magento ACL. Unlabelled.
 - [angeo/module-mcp-server](https://packagist.org/packages/angeo/module-mcp-server) - Read-only storefront catalog access with rate limiting and an extensible tool registry. MIT, released.

@@ -24,6 +24,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 | MaxMage/module-agentic-commerce | —        | —              | —      | —    | ✓        | —   | —     | OSS     | Experimental |
 | rkd/module-llms-txt             | ✓        | —              | —      | —    | —        | —   | —     | MIT     | Unlabelled   |
 | studioraz/magento2-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
+| scandiweb/scandiweb-magento2-mcp| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | angeo (11 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
