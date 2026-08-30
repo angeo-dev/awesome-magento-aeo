@@ -16,18 +16,19 @@ Each project appears once in the [main list](README.md), in the section closest 
 | aligent/magento2-llms-txt       | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage-os/module-llm-txt          | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage-os/module-seo              | ✓        | ✓              | ✓      | ◐    | ◐        | —   | —     | OSS     | Unlabelled   |
+| mage2kishan/module-blog         | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | mage2kishan/module-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | magebitcom (3 modules)          | —        | —              | —      | ◐    | ✓        | ✓   | —     | OSS     | In progress  |
-| magendooro/magemcp              | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | magenable (2 modules)           | —        | —              | —      | ✓    | —        | ✓   | —     | OSS     | Unlabelled   |
+| magendooro/magemcp              | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | mageplaza/magento-2-seo         | —        | —              | ✓      | —    | —        | —   | ◐     | OSS     | Released     |
 | MaxMage/module-agentic-commerce | —        | —              | —      | —    | ✓        | —   | —     | OSS     | Experimental |
 | rkd/module-llms-txt             | ✓        | —              | —      | —    | —        | —   | —     | MIT     | Unlabelled   |
-| studioraz/magento2-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | scandiweb/scandiweb-magento2-mcp| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
+| studioraz/magento2-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
-| angeo (11 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
+| angeo (10 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
 
 ## Commercial
 
@@ -41,7 +42,8 @@ Each project appears once in the [main list](README.md), in the section closest 
 | Meetanshi Agentic Commerce   | ✓        | ✓              | —      | ✓    | ✓        | ✓   | ✓     | Widest single-module coverage here     |
 | Meetanshi Google UCP         | —        | —              | —      | ✓    | ✓        | —   | —     | Google Pay, staged regional rollout    |
 | Meetanshi LLMs TXT Generator | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
-| Mirasvit AI Agent Connector  | —        | —              | ✓      | ✓    | ✓        | ✓   | ✓     | Widest commercial coverage             |
 | Mirasvit Agentic Commerce    | ✓        | ✓              | —      | ✓    | —        | ✓   | —     | Discovery only; checkout on roadmap    |
+| Mirasvit AI Agent Connector  | —        | —              | ✓      | ✓    | ✓        | ✓   | ✓     | Widest commercial coverage             |
 | Plumrocket LLMs TXT          | ✓        | —              | —      | —    | —        | —   | —     | Store-view scoped, Hyvä support        |
+| Webkul AI Crawler Analytics  | —        | ✓              | —      | —    | —        | —   | ✓     | Bot-hit dashboard on the discovery files|
 | Webkul LLMs TXT Generator    | ✓        | ✓              | —      | —    | —        | —   | —     | Crawler analytics dashboard            |

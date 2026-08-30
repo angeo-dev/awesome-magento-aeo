@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**50 projects tracked** — 14 discovery file implementations, 9 MCP servers, 6 agentic checkout projects, 7 specifications.
+**49 projects tracked** — 14 discovery file implementations, 9 MCP servers, 6 agentic checkout projects, 7 specifications.
 
 A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
 
@@ -72,11 +72,11 @@ Files served at a known path that tell agents what the store is, which pages mat
 
 - [aligent/magento2-llms-txt](https://github.com/aligent/magento2-llms-txt) - Store-scoped generation with configurable entity selection and hourly cron evaluation. Unlabelled.
 - [CodeDecorator LLMs TXT Generator](https://codedecorator.com/magento-2-llms-txt-generator-extension.html) - Generation with per-entity exclusion of individual CMS pages, categories and products. Commercial.
-- [Magefan LLMs TXT Generator](https://magefan.com/magento-2-llms-txt-generator) - Per store view generation with brand metadata blocks and configurable cron frequency. Commercial.
 - [mage-os/module-llm-txt](https://github.com/mage-os-lab/llms.txt) - Mage-OS Lab module that collects store data and generates the file through an OpenAI prompt. Unlabelled.
 - [mage2kishan/module-blog](https://packagist.org/packages/mage2kishan/module-blog) - Blog extension whose posts feed `llms.txt` and `llms.json`, with IndexNow pinging and a Markdown export endpoint. Unlabelled.
 - [mage2kishan/module-llms-txt](https://packagist.org/packages/mage2kishan/module-llms-txt) - Serves `llms.txt`, `llms-full.txt` and `llms.json` with weighted ranking, use-case grouping and cron cache warm-up. Unlabelled.
 - [MageDelight LLMs TXT File Generator](https://www.magedelight.com/llms-txt-file-generator-magento-2.html) - Entity selection across products, categories and CMS pages with scheduled regeneration. Commercial.
+- [Magefan LLMs TXT Generator](https://magefan.com/magento-2-llms-txt-generator) - Per store view generation with brand metadata blocks and configurable cron frequency. Commercial.
 - [Meetanshi LLMs TXT Generator](https://meetanshi.com/magento-2-llms-txt-generator.html) - Per store view files with cron auto-update. Commercial.
 - [Plumrocket LLMs TXT Generator](https://commercemarketplace.adobe.com/plumrocket-llms-txt-generator.html) - Store-view-scoped files with automatic regeneration on catalog and content changes, inclusion controls and Hyvä support. Commercial.
 - [rkd/module-llms-txt](https://github.com/iamrobindhiman/magento2-module-llms-txt) - Cursor-based pagination and PHP generators for large catalogs, with CLI dry-run, validation and REST endpoints. MIT, unlabelled.
@@ -116,9 +116,9 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 
 - [magebitcom/magento2-agentic-commerce-module](https://github.com/magebitcom/magento2-agentic-commerce-module) - ACP integration for selling inside ChatGPT, targeting Hyvä, B2B and Adobe Commerce Cloud. In progress.
 - [magebitcom/magento2-universal-commerce-module](https://github.com/magebitcom/magento2-universal-commerce-module) - Universal Commerce Protocol implementation. In progress.
+- [MaxMage/module-agentic-commerce](https://github.com/MaxMage/module-agentic-commerce) - Agentic checkout flow with HMAC signature verification, idempotency and spec-shaped routes. Experimental.
 - [Meetanshi Agentic Commerce](https://meetanshi.com/magento-2-agentic-commerce.html) - UCP profile, generic MCP server, WebMCP page tools and OpenAI ACP with checkout sessions mapped to real Magento quotes and delegated payment tokens through Stripe, plus an agent activity dashboard. Commercial.
 - [Meetanshi Google UCP Checkout](https://meetanshi.com/magento-2-google-ucp.html) - Headless checkout through Google's UCP with Google Pay, order status webhooks back to Google and per-product eligibility control. Commercial.
-- [MaxMage/module-agentic-commerce](https://github.com/MaxMage/module-agentic-commerce) - Agentic checkout flow with HMAC signature verification, idempotency and spec-shaped routes. Experimental.
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
 
 This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — published figures put the live Shopify merchants at somewhere between a dozen and thirty — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
@@ -129,8 +129,8 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 
 - [adwise/magento2-mcp](https://github.com/adwise/magento2-mcp) - Lightweight MCP server exposing store information, module status, configuration, cache and indexer tools, with optional sub-modules for catalog management and Hyvä CMS page editing. Unlabelled.
 - [magebitcom/magento2-mcp-module](https://github.com/magebitcom/magento2-mcp-module) - Admin server with per-tool role ACL, two-layer write gating, PII-redacted audit log and optional domain sub-modules, including a catalog tool extension. In progress.
-- [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [magenable/magento2-mcp](https://github.com/magenable/magento2-mcp) - MCP server module for Magento 2. Unlabelled.
+- [magendooro/magemcp](https://github.com/magendooro/magemcp) - Standalone Python service exposing catalog, orders, customers and inventory over REST and GraphQL, with PII redaction. Unlabelled.
 - [Mirasvit Agentic Commerce](https://mirasvit.com/magento-2-agentic-commerce.html) - Storefront MCP server and WebMCP tools alongside a UCP profile, `llms.txt`, `agents.md` and an agent discovery sitemap. Discovery only; in-conversation checkout is on the roadmap. Commercial.
 - [scandiweb/scandiweb-magento2-mcp](https://github.com/scandiweb/scandiweb-magento2-mcp) - A `POST /mcp` endpoint with OAuth and bearer sign-in, every tool call checked against Magento's own admin role tree, plus an optional content module with CMS, category, product, Hyvä CMS and Snowdog menu tools. OSL-3.0. Unlabelled.
 - [thomastx05/magento-mcp](https://github.com/thomastx05/magento-mcp) - Node administration server with OAuth 1.0 credentials, two-phase commit for bulk operations and guardrails on price and volume. Unlabelled.
@@ -142,11 +142,10 @@ Exposing the store to AI agents as callable tools. Storefront servers face shopp
 Measuring whether any of the above works. Crawl access, citation share and rendering quality are three separate questions, and most auditing still happens inside general SEO suites rather than AEO-specific tools. Amasty, Mageworx and Webkul all include audit or analytics features and are listed in the sections above.
 
 - [Mirasvit](https://mirasvit.com/magento-2-mcp-ai-integration.html) - Store-wide crawler for issues that block extraction, alongside an MCP server with OAuth 2.1 and role-based permissions and an ACP integration. Commercial.
-- [PageSpeed Insights Agentic Browsing](https://pagespeed.web.dev/) - Google's hosted Lighthouse audit grades how ready a page is for AI agents, checking for `llms.txt` at the domain root and registered WebMCP tools. Not Magento-specific, and marked experimental. Free.
 - [angeo/module-aeo-audit](https://packagist.org/packages/angeo/module-aeo-audit) - Weighted signal audit across robots, discovery files, schema, sitemap and feed, with CrUX data and a CI failure threshold. MIT, released.
 - [angeo/module-aeo-brand-visibility](https://packagist.org/packages/angeo/module-aeo-brand-visibility) - Tracks brand recall and citation rate across major assistants, with competitor share-of-voice. MIT, released.
 
-Two hosted options need no installation: the [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports citation counts, cited pages and grounding queries under its AI Performance view — still the only free first-party count of how often an AI system cited a site. Google Search Console added generative AI reporting in June 2026, but it exposes impressions rather than citations.
+Three hosted options need no installation, none of them Magento-specific. Google's [PageSpeed Insights](https://pagespeed.web.dev) added an Agentic Browsing category in Lighthouse 13.3 that grades how ready a page is for AI agents, checking for `llms.txt` at the domain root and registered WebMCP tools; the category is marked experimental. The [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports citation counts, cited pages and grounding queries under its AI Performance view — still the only free first-party count of how often an AI system cited a site. Google Search Console added generative AI reporting in June 2026, but it exposes impressions rather than citations.
 
 ## Reading
 
@@ -155,8 +154,8 @@ Independent write-ups worth reading before choosing anything above.
 - [Agentic Commerce for Magento](https://kishansavaliya.com/blog/magento-agentic-commerce-sell-through-ai-agents) - What selling through AI agents actually requires, including the merchant approval prerequisites.
 - [Best Magento 2 SEO Extensions 2026](https://www.magedelight.com/blog/best-magento-2-seo-extensions-comparison) - Vendor comparison covering where AI features sit inside the established SEO suites. Published by a vendor in the comparison.
 - [Best Magento SEO Extensions 2026](https://kishansavaliya.com/best-magento-seo-extensions) - Opinionated picks covering llms.txt, hreflang and sitemap modules.
-- [What Is the Best Magento SEO Extension in 2026](https://121ecommerce.com/best-magento-seo-extension) - Agency-side comparison of the major SEO suites and their AI additions.
 - [What is llms.txt for Magento 2](https://kishansavaliya.com/what-is-magento-llms-txt) - Setup walkthrough covering exclusions, canonical handling and staleness.
+- [What Is the Best Magento SEO Extension in 2026](https://121ecommerce.com/best-magento-seo-extension) - Agency-side comparison of the major SEO suites and their AI additions.
 - [llms.txt for Magento 2: free versus paid](https://angeo.dev/llms-txt-magento-2-free-vs-paid-module-comparison) - Feature comparison of Magento llms.txt solutions, with stated methodology and disclosure.
 
 ## Related Lists
@@ -171,7 +170,3 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 - [run-as-root/awesome-magento2](https://github.com/run-as-root/awesome-magento2) - The main Magento 2 list, tracking over 230 projects with weekly automated maintenance and graveyard signals.
 - [sunel/awesome-magento](https://github.com/sunel/awesome-magento) - Mixed Magento 1 and Magento 2 resources. Not recently updated.
 - [yan253319066/awesome-geo-resources](https://github.com/yan253319066/awesome-geo-resources) - GEO, AI visibility and citation resources. Vendor-maintained.
-
-## Contributing
-
-Read the contribution guidelines linked at the top before opening a pull request. Corrections to your own project's entry are always welcome and never need justification.
