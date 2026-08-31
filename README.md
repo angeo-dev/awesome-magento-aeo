@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**49 projects tracked** — 14 discovery file implementations, 9 MCP servers, 6 agentic checkout projects, 7 specifications.
+**51 projects tracked** — 15 discovery file implementations, 9 MCP servers, 7 agentic checkout projects, 7 specifications.
 
 A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
 
@@ -72,6 +72,7 @@ Files served at a known path that tell agents what the store is, which pages mat
 
 - [aligent/magento2-llms-txt](https://github.com/aligent/magento2-llms-txt) - Store-scoped generation with configurable entity selection and hourly cron evaluation. Unlabelled.
 - [CodeDecorator LLMs TXT Generator](https://codedecorator.com/magento-2-llms-txt-generator-extension.html) - Generation with per-entity exclusion of individual CMS pages, categories and products. Commercial.
+- [Grazitti LLMs TXT Generator](https://commercemarketplace.adobe.com/grazitti-magento2-llms-txt.html) - Generated fresh on every request from live store data, with optional SKUs and prices, bestseller and new-arrival blocks, brand listings, per-store-view scoping, CDN cache TTL and an `X-Robots-Tag` header to keep the file out of ordinary search results. Commercial.
 - [mage-os/module-llm-txt](https://github.com/mage-os-lab/llms.txt) - Mage-OS Lab module that collects store data and generates the file through an OpenAI prompt. Unlabelled.
 - [mage2kishan/module-blog](https://packagist.org/packages/mage2kishan/module-blog) - Blog extension whose posts feed `llms.txt` and `llms.json`, with IndexNow pinging and a Markdown export endpoint. Unlabelled.
 - [mage2kishan/module-llms-txt](https://packagist.org/packages/mage2kishan/module-llms-txt) - Serves `llms.txt`, `llms-full.txt` and `llms.json` with weighted ranking, use-case grouping and cron cache warm-up. Unlabelled.
@@ -119,6 +120,7 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 - [MaxMage/module-agentic-commerce](https://github.com/MaxMage/module-agentic-commerce) - Agentic checkout flow with HMAC signature verification, idempotency and spec-shaped routes. Experimental.
 - [Meetanshi Agentic Commerce](https://meetanshi.com/magento-2-agentic-commerce.html) - UCP profile, generic MCP server, WebMCP page tools and OpenAI ACP with checkout sessions mapped to real Magento quotes and delegated payment tokens through Stripe, plus an agent activity dashboard. Commercial.
 - [Meetanshi Google UCP Checkout](https://meetanshi.com/magento-2-google-ucp.html) - Headless checkout through Google's UCP with Google Pay, order status webhooks back to Google and per-product eligibility control. Commercial.
+- [xpaysh/agentic-commerce-for-magento](https://github.com/xpaysh/agentic-commerce-for-magento) - Node sidecar speaking ACP, UCP and AP2 against Magento's REST API, emitting `llms.txt`, `.well-known/ucp` and product JSON-LD, with signed-JWT cart deeplinks that hand the shopper back to the storefront checkout. Payment is left to the store's own PSP. Apache-2.0, v0.1.
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
 
 This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — published figures put the live Shopify merchants at somewhere between a dozen and thirty — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
@@ -169,4 +171,5 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 - [MagePsycho/awesome-magento-ai](https://github.com/MagePsycho/awesome-magento-ai) - AI tooling for building and operating Magento: agent skills, dev-side MCP servers, admin and catalog AI modules. The complement to this list, covering AI working inside the store rather than the store as AI reads it.
 - [run-as-root/awesome-magento2](https://github.com/run-as-root/awesome-magento2) - The main Magento 2 list, tracking over 230 projects with weekly automated maintenance and graveyard signals.
 - [sunel/awesome-magento](https://github.com/sunel/awesome-magento) - Mixed Magento 1 and Magento 2 resources. Not recently updated.
+- [xpaysh/awesome-agentic-commerce](https://github.com/xpaysh/awesome-agentic-commerce) - ACP, UCP, AP2 and the payment rails beneath them, with a compatibility matrix, version pinning and a list of well-known paths not to emit.
 - [yan253319066/awesome-geo-resources](https://github.com/yan253319066/awesome-geo-resources) - GEO, AI visibility and citation resources. Vendor-maintained.

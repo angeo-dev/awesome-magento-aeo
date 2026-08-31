@@ -27,6 +27,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 | scandiweb/scandiweb-magento2-mcp| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | studioraz/magento2-llms-txt     | ✓        | —              | —      | —    | —        | —   | —     | OSS     | Unlabelled   |
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
+| xpaysh/agentic-commerce-for-magento| ✓        | ✓              | ✓      | —    | ✓        | —   | —     | OSS     | v0.1         |
 | yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | angeo (10 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
 
@@ -36,6 +37,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 |------------------------------|----------|----------------|--------|------|----------|-----|-------|----------------------------------------|
 | Amasty SEO Toolkit           | ✓        | —              | ✓      | —    | —        | —   | ✓     | llms.txt is Pro and Premium tiers only |
 | CodeDecorator LLMs TXT       | ✓        | —              | —      | —    | —        | —   | —     | Per-entity exclusion controls          |
+| Grazitti LLMs TXT            | ✓        | —              | —      | —    | —        | —   | —     | Per-store-view, SKUs/prices optional   |
 | MageDelight                  | ✓        | —              | ✓      | —    | —        | —   | —     | —                                      |
 | Magefan LLMs TXT Generator   | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
 | Mageworx SEO Suite Ultimate  | ✓        | ✓              | ✓      | —    | —        | —   | —     | Bot analytics with verification        |
@@ -45,5 +47,5 @@ Each project appears once in the [main list](README.md), in the section closest 
 | Mirasvit Agentic Commerce    | ✓        | ✓              | —      | ✓    | —        | ✓   | —     | Discovery only; checkout on roadmap    |
 | Mirasvit AI Agent Connector  | —        | —              | ✓      | ✓    | ✓        | ✓   | ✓     | Widest commercial coverage             |
 | Plumrocket LLMs TXT          | ✓        | —              | —      | —    | —        | —   | —     | Store-view scoped, Hyvä support        |
-| Webkul AI Crawler Analytics  | —        | ✓              | —      | —    | —        | —   | ✓     | Bot-hit dashboard on the discovery files|
+| Webkul AI Crawler Analytics  | —        | ✓              | —      | —    | —        | —   | ✓     | Bot-hit dashboard on discovery files   |
 | Webkul LLMs TXT Generator    | ✓        | ✓              | —      | —    | —        | —   | —     | Crawler analytics dashboard            |
