@@ -29,14 +29,14 @@ Each project appears once in the [main list](README.md), in the section closest 
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | xpaysh/agentic-commerce-for-magento| ✓        | ✓              | ✓      | —    | ✓        | —   | —     | OSS     | v0.1         |
 | yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
-| angeo (10 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
+| angeo (11 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
 
 ## Commercial
 
 | Project                      | llms.txt | Crawler policy | Schema | Feed | Checkout | MCP | Audit | Notes                                  |
 |------------------------------|----------|----------------|--------|------|----------|-----|-------|----------------------------------------|
 | Amasty SEO Toolkit           | ✓        | —              | ✓      | —    | —        | —   | ✓     | llms.txt is Pro and Premium tiers only |
-| CodeDecorator LLMs TXT       | ✓        | —              | —      | —    | —        | —   | —     | Per-entity exclusion controls          |
+| CodeDecorator LLMs TXT       | ✓        | —              | —      | —    | —        | —   | —     | Key-value or Markdown output              |
 | Grazitti LLMs TXT            | ✓        | —              | —      | —    | —        | —   | —     | Per-store-view, SKUs/prices optional   |
 | MageDelight                  | ✓        | —              | ✓      | —    | —        | —   | —     | —                                      |
 | Magefan LLMs TXT Generator   | ✓        | —              | —      | —    | —        | —   | —     | Single purpose                         |
