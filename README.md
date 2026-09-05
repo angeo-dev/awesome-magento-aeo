@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**53 projects tracked** — 15 discovery file implementations, 9 MCP servers, 9 agentic checkout projects, 7 specifications.
+**52 projects tracked** — 15 discovery file implementations, 9 MCP servers, 8 agentic checkout projects, 7 specifications.
 
 A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
 
@@ -16,7 +16,7 @@ Last reviewed: August 17, 2026. The list is CC0; the projects it links to keep t
 
 **This ecosystem is roughly a year old.** Discovery files are crowded and structured data is mature. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
-**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 13 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
+**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 12 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
 
 ## Contents
 
@@ -83,7 +83,7 @@ Files served at a known path that tell agents what the store is, which pages mat
 - [rkd/module-llms-txt](https://github.com/iamrobindhiman/magento2-module-llms-txt) - Cursor-based pagination and PHP generators for large catalogs, with CLI dry-run, validation and REST endpoints. MIT, unlabelled.
 - [studioraz/magento2-llms-txt](https://github.com/studioraz/magento2-llms-txt) - Admin-generated Markdown with manual override and awareness of installed feed and point-of-sale modules. Unlabelled.
 - [Webkul LLMs TXT Generator](https://commercemarketplace.adobe.com/webkul-module-llms-txt-generator.html) - Marketplace extension serving both files with correct content types, bundled with a crawler analytics dashboard. Commercial.
-- [angeo/module-llms-txt](https://github.com/angeo-dev/module-llms-txt) - Generates `llms.txt`, `llms-full.txt`, `llms.jsonl` and on-the-fly Markdown page mirrors, Page Builder aware. MIT, released.
+- [angeo/module-llms-txt](https://packagist.org/packages/angeo/module-llms-txt) - Generates `llms.txt`, `llms-full.txt`, `llms.jsonl` and on-the-fly Markdown page mirrors, Page Builder aware. MIT, released.
 - [angeo/module-ucp](https://packagist.org/packages/angeo/module-ucp) - Publishes a `.well-known/ucp` profile at spec version 2026-04-08, served by a PHP controller so it carries the JSON content type and CORS headers the spec requires without web-server changes. REST and MCP service bindings, declared payment handlers, ECDSA P-256 public signing keys, and CI validation against the official UCP JSON Schemas. MIT, released.
 
 ## Crawler Policy and Analytics
@@ -122,7 +122,6 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 - [Meetanshi Google UCP Checkout](https://meetanshi.com/magento-2-google-ucp.html) - Headless checkout through Google's UCP with Google Pay, order status webhooks back to Google and per-product eligibility control. Commercial.
 - [xpaysh/agentic-commerce-for-magento](https://github.com/xpaysh/agentic-commerce-for-magento) - Node sidecar speaking ACP, UCP and AP2 against Magento's REST API, emitting `llms.txt`, `.well-known/ucp` and product JSON-LD, with signed-JWT cart deeplinks that hand the shopper back to the storefront checkout. Payment is left to the store's own PSP. Apache-2.0, v0.1.
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
-- [angeo/module-openai-instant-checkout](https://github.com/angeo-dev/module-openai-instant-checkout) - Agentic Commerce Protocol Instant Checkout for Magento 2, exposing an Agentic Checkout API so an agent can complete the purchase. MIT, released.
 - [angeo/module-ucp-catalog](https://packagist.org/packages/angeo/module-ucp-catalog) - Serves the `catalog.search` and `catalog.lookup` endpoints that the UCP profile advertises, with responses validated in CI against the official UCP JSON Schemas at the pinned spec tag. MIT, released.
 
 This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — published figures put the live Shopify merchants at somewhere between a dozen and thirty — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
