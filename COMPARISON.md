@@ -29,7 +29,7 @@ Each project appears once in the [main list](README.md), in the section closest 
 | thomastx05/magento-mcp          | —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
 | xpaysh/agentic-commerce-for-magento| ✓        | ✓              | ✓      | —    | ✓        | —   | —     | OSS     | v0.1         |
 | yuriyakishin/magento2-mcp-server| —        | —              | —      | —    | —        | ✓   | —     | OSS     | Unlabelled   |
-| angeo (11 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
+| angeo (12 modules)              | ✓        | ✓              | ✓      | ✓    | ✓        | ✓   | ✓     | MIT     | Released     |
 
 ## Commercial
 

@@ -6,7 +6,7 @@ If you have ever asked how to get a Magento store to show up in ChatGPT, how to 
 
 Answer Engine Optimization (AEO) — also called GEO, LLMO, AI SEO or AI search optimization — is the practice of configuring a site so AI assistants can read it, trust it and recommend it. Magento ships almost none of this out of the box: no `llms.txt`, no AI-bot policy in `robots.txt`, no agentic checkout, no MCP endpoint. This list tracks what the ecosystem has built to close that gap.
 
-**52 projects tracked** — 15 discovery file implementations, 9 MCP servers, 8 agentic checkout projects, 7 specifications.
+**53 projects tracked** — 15 discovery file implementations, 9 MCP servers, 9 agentic checkout projects, 7 specifications.
 
 A capability matrix for every project — `llms.txt`, crawler policy, structured data, feeds, checkout, MCP, auditing — is in [COMPARISON.md](COMPARISON.md).
 
@@ -16,7 +16,7 @@ Last reviewed: August 17, 2026. The list is CC0; the projects it links to keep t
 
 **This ecosystem is roughly a year old.** Discovery files are crowded and structured data is mature. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
-**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 12 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
+**Disclosure:** this list is maintained by [angeo.dev](https://angeo.dev), which publishes 13 of the entries below. To keep the ordering honest, **entries maintained by angeo.dev are listed last within their section**, after all third-party projects, rather than in alphabetical position. Corrections to any entry are welcome and never need justification.
 
 ## Contents
 
@@ -122,6 +122,7 @@ Letting an agent complete a purchase rather than only find a product. **The leas
 - [Meetanshi Google UCP Checkout](https://meetanshi.com/magento-2-google-ucp.html) - Headless checkout through Google's UCP with Google Pay, order status webhooks back to Google and per-product eligibility control. Commercial.
 - [xpaysh/agentic-commerce-for-magento](https://github.com/xpaysh/agentic-commerce-for-magento) - Node sidecar speaking ACP, UCP and AP2 against Magento's REST API, emitting `llms.txt`, `.well-known/ucp` and product JSON-LD, with signed-JWT cart deeplinks that hand the shopper back to the storefront checkout. Payment is left to the store's own PSP. Apache-2.0, v0.1.
 - [angeo/module-mcp-checkout](https://packagist.org/packages/angeo/module-mcp-checkout) - Guest cart and checkout exposed as MCP tools with server-side guardrails and an order log. MIT, released.
+- [angeo/module-openai-instant-checkout](https://github.com/angeo-dev/module-openai-instant-checkout) - Agentic Commerce Protocol Instant Checkout for Magento 2, exposing an Agentic Checkout API so an agent can complete the purchase. MIT, released.
 - [angeo/module-ucp-catalog](https://packagist.org/packages/angeo/module-ucp-catalog) - Serves the `catalog.search` and `catalog.lookup` endpoints that the UCP profile advertises, with responses validated in CI against the official UCP JSON Schemas at the pinned spec tag. MIT, released.
 
 This category is smaller than it looks. In March 2026 OpenAI pulled back from in-chat Instant Checkout — published figures put the live Shopify merchants at somewhere between a dozen and thirty — and moved toward product discovery with checkout completing on the merchant's own store. ACP itself remains an active open specification, and OpenAI's developer documentation still describes Instant Checkout for approved partners, so treat the direction as clearer than the details. Read the protocol before budgeting engineering time against it.
@@ -148,13 +149,14 @@ Measuring whether any of the above works. Crawl access, citation share and rende
 - [angeo/module-aeo-audit](https://packagist.org/packages/angeo/module-aeo-audit) - Weighted signal audit across robots, discovery files, schema, sitemap and feed, with CrUX data and a CI failure threshold. MIT, released.
 - [angeo/module-aeo-brand-visibility](https://packagist.org/packages/angeo/module-aeo-brand-visibility) - Tracks brand recall and citation rate across major assistants, with competitor share-of-voice. MIT, released.
 
-Three hosted options need no installation, none of them Magento-specific. Google's [PageSpeed Insights](https://pagespeed.web.dev) added an Agentic Browsing category in Lighthouse 13.3 that grades how ready a page is for AI agents, checking for `llms.txt` at the domain root and registered WebMCP tools; the category is marked experimental. The [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports citation counts, cited pages and grounding queries under its AI Performance view — still the only free first-party count of how often an AI system cited a site. Google Search Console added generative AI reporting in June 2026, but it exposes impressions rather than citations.
+Four options need no Magento module, none of them Magento-specific. Google's [PageSpeed Insights](https://pagespeed.web.dev) added an Agentic Browsing category in Lighthouse 13.3 that grades how ready a page is for AI agents, checking for `llms.txt` at the domain root and registered WebMCP tools; the category is marked experimental. The [Agent Skills for AEO](https://github.com/angeo-dev/skills) marketplace installs into Claude Code and audits any site for crawler access, `llms.txt` and structured data. The [angeo.dev AEO scan](https://angeo.dev/ai-magento-audit) reads discovery and agentic signals for any storefront URL, and Bing Webmaster Tools reports citation counts, cited pages and grounding queries under its AI Performance view — still the only free first-party count of how often an AI system cited a site. Google Search Console added generative AI reporting in June 2026, but it exposes impressions rather than citations.
 
 ## Reading
 
 Independent write-ups worth reading before choosing anything above.
 
 - [Agentic Commerce for Magento](https://kishansavaliya.com/blog/magento-agentic-commerce-sell-through-ai-agents) - What selling through AI agents actually requires, including the merchant approval prerequisites.
+- [anthropics/commerce-agents](https://github.com/anthropics/commerce-agents) - Anthropic's reference blueprint for shopping and merchant agents built on Claude. Read it for the other side of the interface: what an agent does with the discovery and checkout surfaces the modules in this list publish. [Shopify's implementation](https://github.com/Shopify/claude-for-commerce-examples) drives its shopping agent off any domain serving `.well-known/ucp`. Not Magento-specific.
 - [Best Magento 2 SEO Extensions 2026](https://www.magedelight.com/blog/best-magento-2-seo-extensions-comparison) - Vendor comparison covering where AI features sit inside the established SEO suites. Published by a vendor in the comparison.
 - [Best Magento SEO Extensions 2026](https://kishansavaliya.com/best-magento-seo-extensions) - Opinionated picks covering llms.txt, hreflang and sitemap modules.
 - [What is llms.txt for Magento 2](https://kishansavaliya.com/what-is-magento-llms-txt) - Setup walkthrough covering exclusions, canonical handling and staleness.
