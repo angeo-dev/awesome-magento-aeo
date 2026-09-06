@@ -12,7 +12,7 @@ A capability matrix for every project — `llms.txt`, crawler policy, structured
 
 An entry belongs here if it is publicly available, works with Magento 2, Adobe Commerce or Mage-OS, has an identifiable AEO or agentic capability, and has a verifiable repository or product page. Full criteria and entry format are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Last reviewed: August 17, 2026. The list is CC0; the projects it links to keep their own licenses.
+Last reviewed: August 17, 2026. Each project keeps its own license; see the entry for details.
 
 **This ecosystem is roughly a year old.** Discovery files are crowded and structured data is mature. Everything downstream of that — agentic checkout, MCP, the ACP and UCP protocols — is early: most projects are pre-1.0, several describe themselves as experimental, and the specifications themselves are still moving. A long list should not be read as a mature market. Read the status column before installing anything from the lower sections.
 
@@ -175,3 +175,7 @@ This list stays narrow on purpose. Platform-agnostic AEO research, benchmarks, v
 - [sunel/awesome-magento](https://github.com/sunel/awesome-magento) - Mixed Magento 1 and Magento 2 resources. Not recently updated.
 - [xpaysh/awesome-agentic-commerce](https://github.com/xpaysh/awesome-agentic-commerce) - ACP, UCP, AP2 and the payment rails beneath them, with a compatibility matrix, version pinning and a list of well-known paths not to emit.
 - [yan253319066/awesome-geo-resources](https://github.com/yan253319066/awesome-geo-resources) - GEO, AI visibility and citation resources. Vendor-maintained.
+
+## Contributing
+
+Read the contribution guidelines linked at the top before opening a pull request. Corrections to your own project's entry are always welcome and never need justification.
