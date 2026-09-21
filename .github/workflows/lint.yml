@@ -31,7 +31,10 @@ jobs:
           args: >-
             --no-progress
             --max-concurrency 4
+            --timeout 30
+            --max-retries 3
+            --retry-wait-time 5
             --accept 200,206,403,429
             --exclude-path node_modules
-            README.md COMPARISON.md CONTRIBUTING.md code-of-conduct.md llms.txt
+            README.md COMPARISON.md CONTRIBUTING.md WATCHLIST.md code-of-conduct.md llms.txt
           fail: true

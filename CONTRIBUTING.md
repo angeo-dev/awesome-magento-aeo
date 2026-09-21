@@ -51,4 +51,4 @@ Entries are removed when a link dies, a project is delisted, or a description ca
 
 ## Review cadence
 
-The list carries a `Last reviewed` date. Links are checked weekly by CI; descriptions and status labels are re-read by a human at least quarterly. If the date is stale, open an issue.
+The list carries a `Last reviewed` date. Links are checked weekly by CI, except the few domains in `.lycheeignore` that block automated checkers, which are opened by hand at each review; descriptions and status labels are re-read by a human at least quarterly. If the date is stale, open an issue.

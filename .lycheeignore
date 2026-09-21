@@ -1,0 +1,4 @@
+# business.adobe.com fails in CI with "HTTP/2 protocol error": Adobe's CDN
+# rejects the checker, not the page. Both links open normally in a browser.
+# They are excluded here and checked by hand at each "Last reviewed" pass.
+^https://business\.adobe\.com/
